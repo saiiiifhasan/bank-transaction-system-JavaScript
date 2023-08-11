@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Transactions Using-JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.1.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./favicon.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+</head>
+<body>
+    <main class="lg:w[95%] w-[80%] mx-auto">
+        <section>
+            <div class="navbar bg-base-100 shadow-2xl rounded-box">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost lg:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </label>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                      <li><a>HOME</a></li>
+                      <li>
+                        <a>Parent</a>
+                        <ul class="p-2">
+                          <li><a>Submenu 1</a></li>
+                          <li><a>Submenu 2</a></li>
+                        </ul>
+                      </li>
+                      <li><a>Item 3</a></li>
+                    </ul>
+                  </div>
+                  <a class="btn btn-ghost normal-case text-xl w-32"><img src="./logo.png" alt=""></a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li class="font-bold"><a>HOME</a></li>
+                    <li class="font-bold"><a>DASHBOARD</a></li>
+                    <li class="font-bold"><a>ABOUT</a></li>
+                    <li class="font-bold"><a>BRANCHES</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                  <a class="btn btn-success btn-outline font-bold">LOGIN</a>
+                </div>
+              </div>
+        </section>
+        <section class="my-6 lg:flex gap-4">
+            <div class="mb-2 card w-96 bg-base-100 shadow-2xl bg-green-400">
+                <div class="card-body">
+                  <h2 class="text-xl font-bold text-center">TOTAL DEPOSIT</h2>
+                  <p class="text-center text-lg">Your total deposit is</p>
+                  <p class="text-center font-bold text-3xl">$<span id="totalDeposit">0</span></p>
+                </div>
+              </div>
+              <div class="mb-2 card w-96 bg-base-100 shadow-2xl bg-red-600">
+                <div class="card-body">
+                  <h2 class="text-xl font-bold text-center">TOTAL WITHDRAW</h2>
+                  <p class="text-center text-lg">Your total withdraw is</p>
+                  <p class="text-center font-bold text-3xl">$<span id="totalWithdraw">0</span></p>
+                </div>
+              </div>
+              <div class="mb-2 card w-96 bg-base-100 shadow-2xl bg-neutral-950">
+                <div class="card-body">
+                  <h2 class="text-xl font-bold text-center text-white">AVAILABLE BALANCE</h2>
+                  <p class="text-center text-lg text-white">Your available balance is</p>
+                  <p class="text-center font-bold text-3xl text-white">$<span id="totalBalance">0</span></p>
+                </div>
+              </div>
+        </section>
+        <section class="lg:flex justify-center gap-6">
+            <div class="form-control mb-2">
+                <div class="input-group shadow-2xl rounded-box">
+                  <input id="depositInput" type="text" placeholder="USD" class="input input-bordered" />
+                  <button onclick="deposit()" class="btn btn-outline font-bold">
+                    DEPOSIT
+                  </button>
+                </div>
+              </div>
+              <div class="form-control mb-4">
+                <div class="input-group shadow-2xl rounded-box">
+                  <input id="withdrawInput" type="text" placeholder="USD" class="input input-bordered" />
+                  <button onclick="withdraw()" class="btn btn-outline font-bold">
+                    WITHDRAW
+                  </button>
+                </div>
+              </div>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
